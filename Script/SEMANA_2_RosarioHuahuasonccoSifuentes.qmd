@@ -1,0 +1,24 @@
+---
+title: "SEMANA_2_ProyectoFinal"
+author: "Rosario_Huahuasoncco_Sifuentes"
+format: html
+editor: visual
+---
+
+**GRUPO 5**
+
+## PROYECTO FINAL
+
+**SEMANA 2: Como crear un proyecto en Rstudio**
+
+```{r}
+#PASO 1: En la parte superior derecha: seleccionamos New Proyect 
+
+#PASO 2: Seleccionamos New Directory. 
+
+#PASO 3: Nuevamente seleccionamos New Proyect
+
+#PASO 4: Colocamos el nombre del proyecto, seleccionamos Browser para guardarlo en escritorio y finalmente Create Project para que se llegue a crear
+
+#PASO 5: Proyecto creado en R studio
+```

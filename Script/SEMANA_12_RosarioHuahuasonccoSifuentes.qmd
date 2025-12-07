@@ -1,0 +1,103 @@
+---
+title: "SEMANA_12_ProyectoFinal"
+author: "Rosario_Huahuasoncco_Sifuentes"
+format: html
+editor: visual
+---
+
+**GRUPO 5**
+
+## PROYECTO FINAL
+
+**SEMANA 12:** **Como calcular las medidas de dispersión (Varianza, Desviación estándar, Rango, Rango intercuartílico) y de posición (Cuartiles), script para visualizar las 6 primeras filas, y para poder visualizar un resumen de dichas medidas**
+
+**PASO 1:** . Descargamos un archivo en formato CSV y lo importamos\
+**PASO 2:** Nos aparecerá la tabla con las variables y sus resultados\
+**PASO 3:** Comenzamos a redactar "data" y el ejecutable del archivo que lo encontramos en la ventana Code Preview antes de importar en este caso de mi archivo es:\
+**data \<- read_csv("C:/Users/ROSARIO/Desktop/Data/s04_diabetes.csv")** y lo ejecutamos
+
+```{r}
+data <- read_csv("C:/Users/ROSARIO/Desktop/Data/s04_diabetes.csv")
+```
+
+**PASO 4:** Ya teniendo todo listo, comenzamos a hallar las medidas de dispersión
+
+[**VARIANZA**]{.underline}
+
+**PASO 5:** Si deseamos escribimos un comentario, después digitamos:\
+**var(data\$Embarazos,na.rm = TRUE)** y ejecutamos
+
+```{r}
+#MEDIDAS DE DISPERSIÓN
+
+#VARIANZA
+var(data$Embarazos,na.rm = TRUE)
+```
+
+**PASO 6:** Nos arrojara los resultados de **la Varianza**
+
+[**DESVIACIÓN ESTÁNDAR**]{.underline}
+
+**PASO 7:** Ahora de igual manera si deseamos escribimos un comentario, después digitamos: **sd(data\$Embarazos,na.rm = TRUE)** y ejecutamos
+
+```{r}
+#DESVIACIÓN ESTÁNDAR
+sd(data$Embarazos,na.rm = TRUE)
+```
+
+**PASO 8:** Nos arrojara los resultados de **la Desviación Estándar**
+
+[**RANGO**]{.underline}
+
+**PASO 9:** Ahora de igual manera si deseamos escribimos un comentario, después digitamos: **range(data\$Embarazos,na.rm = TRUE)** y ejecutamos
+
+```{r}
+#RANGO
+range(data$Embarazos,na.rm = TRUE)
+```
+
+**PASO 10:** Nos arrojara los resultados del **Rango**
+
+[**RANGO INTERCUARTÍLICO**]{.underline}
+
+**PASO 11:** Ahora de igual manera si deseamos escribimos un comentario, después digitamos: **IQR(data\$Embarazos,na.rm = TRUE)** y ejecutamos
+
+```{r}
+#RANGO INTERCUARTÍLICO
+IQR(data$Embarazos,na.rm = TRUE)
+```
+
+**PASO 12:** Nos arrojara los resultados del **Rango Intercuartílico**
+
+[**CUARTIL**]{.underline}
+
+**PASO 13:** Ahora de igual manera si deseamos escribimos un comentario, después digitamos: **quantile(data\$Embarazos,probs =c(0.25,0.5,0.75,0.90,na.rm = TRUE))** y ejecutamos
+
+```{r}
+#CUARTIL
+quantile(data$Embarazos,probs =c(0.25,0.5,0.75,0.90,na.rm = TRUE))
+```
+
+**PASO 14:** Nos arrojara los resultados del **Cuartil**
+
+[**VISUALIZAR LAS 6 PRIMERAS FILAS**]{.underline}
+
+**PASO 15:** Ahora de igual manera si deseamos escribimos un comentario, después digitamos: **head(data)** y ejecutamos
+
+```{r}
+#VISUALIZAR LAS 6 PRIMERAS FILAS
+head(data)
+```
+
+**PASO 16:** Nos arrojara los resultados de las **6 primeras filas**
+
+[**VISUALIZAR UN RESUMEN DE DICHAS MEDIDAS**]{.underline}
+
+**PASO 17:** Ahora de igual manera si deseamos escribimos un comentario, después digitamos: **summary(data)** y ejecutamos
+
+```{r}
+#VISUALIZAR UN RESUMEN DE DICHAS MEDIDAS
+summary(data)
+```
+
+**PASO 18:** Nos arrojara los resultados del **resumen de dichas medidas**

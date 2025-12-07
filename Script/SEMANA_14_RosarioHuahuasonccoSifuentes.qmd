@@ -1,0 +1,89 @@
+---
+title: "SEMANA_14_ProyectoFinal"
+author: "Rosario_Huahuasoncco_Sifuentes"
+format: html
+editor: visual
+---
+
+**GRUPO 5**
+
+## PROYECTO FINAL
+
+**SEMANA 14:** **Realizar el análisis de Regresión, Análisis univariado, Multivariado**
+
+Para realizar un análisis de regresión, debemos cargar datos, eso quiere decir crearemos un dataset simulado
+
+**CASO Nro 1 Regresión lineal univariada en R**
+
+```{r}
+#CARGA DE DATOS(creamos dataset simulado)
+set.seed(123)
+n <- 100
+IMC <- rnorm(n, 27, 4)
+PAS <- 90 + 1.5*IMC + rnorm(n, 0, 8)
+datos <- data.frame(IMC, PAS)
+head(datos)
+```
+
+```{r}
+#AJUSTAR MODELO Y RESUMEN
+modelo_uni <- lm(PAS ~ IMC, data = datos)
+summary(modelo_uni)
+```
+
+```{r}
+#REALIZAR GRÁFICO
+plot(datos$IMC, datos$PAS, main="PAS vs IMC", xlab="IMC", ylab="PAS")
+abline(modelo_uni, lwd=2)
+```
+
+**CASO Nro 2 Regresión Univariada**
+
+```{r}
+#CARGA DE DATOS(creamos dataset simulado)
+set.seed(123)
+Edad <- sample(20:70, 30, replace=TRUE)
+Glucosa <- 70 + 0.9*Edad + rnorm(30, 0, 8)
+datos <- data.frame(Edad, Glucosa)
+```
+
+```{r}
+#REALIZAR GRÁFICO
+plot(Edad, Glucosa,
+     main = "Relación entre Edad y Glucosa",
+     xlab = "Edad (años)",
+     ylab = "Glucosa (mg/dL)",
+     pch = 19)
+abline(lm(Glucosa ~ Edad), col="blue", lwd=2)
+```
+
+**CASO Nro 3 Regresión multivariado**
+
+```{r}
+#CARGA DE DATOS(creamos dataset simulado)
+set.seed(123)
+n <- 80
+IMC <- rnorm(n, 27, 4)
+Edad <- rnorm(n, 45, 10)
+Grasas <- rnorm(n, 60, 15)
+Colesterol <- 95 + 2.1*IMC + 0.85*Edad + 1.45*Grasas + rnorm(n, 0, 15)
+datos <- data.frame(IMC, Edad, Grasas, Colesterol)
+head(datos)
+```
+
+```{r}
+#AJUSTAR MODELO MULTIPLE
+modelo <- lm(Colesterol ~ IMC + Edad + Grasas, data = datos)
+summary(modelo)
+```
+
+```{r}
+#RESUMEN
+summary(modelo)$coefficients
+```
+
+```{r}
+#VERIFICAR SUPUESTOS DEL MODELO
+par(mfrow=c(2,2))
+plot(modelo)
+```

@@ -1,0 +1,64 @@
+---
+title: "SEMANA_8_ProyectoFinal"
+author: "Rosario_Huahuasoncco_Sifuentes"
+format: html
+editor: visual
+---
+
+**GRUPO 5**
+
+## PROYECTO FINAL
+
+**SEMANA 8: Como instalar un paquete en Rstudio - realiza tu gráfico estadístico (Histograma)**
+
+**INSTALAR UN PAQUETE EN RSTUDIO**
+
+**PASO 1:** Digitar **install.packages()** entre los paréntesis colocamos el nombre del paquete entre comillas que deseamos instalar (en este caso yo puse **"fdth"**)\
+**PASO 2:** Después digitamos **library()** igualmente entre los paréntesis colocamos el nombre del paquete que deseamos instalar (en este caso yo puse **fdth**) y después ejecutamos
+
+```{r}
+##INSTALAR Y ACTIVAR UN PAQUETE "fdth"
+install.packages("fdth")
+library(fdth)
+```
+
+**PASO 3:** Después verificamos en la ventana derecha inferior, en la sección Packages al costado del nombre del paquete debe salir un ✔ , entonces es así que el paquete está instalado y activado correctamente listo para trabajar con el
+
+**REALIZAR UN GRÁFICO ESTADÍSTICO (Histograma)**
+
+**PASO 1:**Digitaremos opcionalmente un comentario, instalar y activamos el paquete **fdth** previamente.\
+**PASO 2:** Luego descargar un archivo en formato CSV del repositorio GIBHUB y importarlo, después copiar el ejecutable del archivo en formato CSV en este caso es:\
+\<- read_csv("C:/Users/ROSARIO/Desktop/s04_diabetes.csv") pero antes de ello colocar diabetes y ejecutarlo
+
+```{r}
+diabetes <- read_csv("C:/Users/ROSARIO/Desktop/Data/s04_diabetes.csv")
+```
+
+**PASO 3:** Después digitar **apertura\<-diabetes\$Embarazos** y ejecutamos
+
+```{r}
+apertura<-diabetes$Embarazos
+```
+
+**PASO 4:** Después digitar un comentario de manera opcional y el código:\
+**tabla\<- fdt(apertura)\
+tabla**
+
+```{r}
+#VAMOS A CRAR TABLA Y GRÁFICOS
+tabla<- fdt(apertura)
+tabla
+```
+
+**PASO 5:** : Después digitar un comentario de manera opcional y el código:\
+**hist(apertura)\
+hist(apertura,col = "yellow")\
+**y ejecutarlo, recordar que el color es opcional (siempre se debe escribir en inglés)
+
+```{r}
+#VAMOS A CREAR UN GRÁFICO HISTOGRAMA
+hist(apertura)
+hist(apertura,col = "yellow")
+```
+
+**PASO 6:** Finalmente tenemos nuestro grafico (Histograma)

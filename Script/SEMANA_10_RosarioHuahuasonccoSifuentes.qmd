@@ -1,0 +1,59 @@
+---
+title: "SEMANA_10_ProyectoFinal"
+author: "Rosario_Huahuasoncco_Sifuentes"
+format: html
+editor: visual
+---
+
+**GRUPO 5**
+
+## PROYECTO FINAL
+
+**SEMANA 10: Como calcular las medidas de tendencia central (Media aritmética, Mediana, Moda)**
+
+**PASO 1:** . Descargamos un archivo en formato CSV y lo importamos\
+**PASO 2:** Nos aparecerá la tabla con las variables y sus resultados\
+**PASO 3:** Comenzamos a redactar data y el ejecutable del archivo que lo encontramos en la ventana Code Preview antes de importar en este caso de mi archivo es:\
+**data \<- read_csv("C:/Users/ROSARIO/Desktop/Data/s04_diabetes.csv")** y lo ejecutamos
+
+```{r}
+data <- read_csv("C:/Users/ROSARIO/Desktop/Data/s04_diabetes.csv")
+```
+
+**PASO 4:** Ya teniendo todo listo, comenzamos a hallar las Medidas de Tendencia Central
+
+[**MEDIA ARITMÉTICA**]{.underline}
+
+**PASO 5:** Si deseamos escribimos un comentario, después digitamos:\
+**mean(data\$Embarazos)** y ejecutamos
+
+```{r}
+#MEDIDAS DE TENDENCIA CENTRAL
+
+#MEDIA ARITMÉTICA
+mean(data$Embarazos)
+```
+
+**PASO 6:** Nos arrojara los resultados de **la Media Aritmética**
+
+[**MEDIANA**]{.underline}
+
+**PASO 7:** Ahora de igual manera si deseamos escribimos un comentario, después digitamos: **median(data\$Embarazos)** y ejecutamos
+
+```{r}
+#MEDIANA
+median(data$Embarazos)
+```
+
+**PASO 8:** Nos arrojara los resultados de **la Mediana**
+
+[**MODA**]{.underline}
+
+**PASO 9:** Ahora de igual manera si deseamos escribimos un comentario, después digitamos: **mode_Embarazos\<-names(sort(table(data\$Embarazos),decreasing = TRUE))** y ejecutamos
+
+```{r}
+#MODA
+mode_Embarazos<-names(sort(table(data$Embarazos),decreasing = TRUE))
+```
+
+**PASO 10:** Nos arrojara los resultados de **la Moda**

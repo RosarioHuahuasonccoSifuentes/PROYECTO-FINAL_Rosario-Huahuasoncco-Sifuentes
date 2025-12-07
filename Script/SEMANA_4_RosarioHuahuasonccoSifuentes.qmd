@@ -1,0 +1,28 @@
+---
+title: "SEMANA_4_ProyectoFinal"
+author: "Rosario_Huahuasoncco_Sifuentes"
+format: html
+editor: visual
+---
+
+**GRUPO 5**
+
+## PROYECTO FINAL
+
+**SEMANA 4: Como descargar un archivo en formato CSV del repositorio GIBHUB**
+
+**PASO 1:** Dirigirse a la Guía de Práctica del curso\
+**PASO 2:** Buscar el link que dirige al repositorio GitHub y dar click\
+**PASO 3:** Para descargar la base de datos que usaremos, dar click en la carpeta Data\
+**PASO 4:** Ubico el archivo en formato CSV, en este caso, yo descargare la el archivo de s04_diabetes.csv\
+**PASO 5:** Se muestra la lista de datos con la que se podrá trabajar\
+**PASO 6**: Daremos click en el ícono de descarga\
+**PASO 7:** En la derecha superior de la ventana seleccionamos el icono de descarga y daremos click en Guardar como\
+**PASO 8:** El archivo se descargará y almacenará en la carpeta de descargas o de nuestra preferencia
+
+```{r}
+#Aquí demostrare que descargue mi archivo CSV de s04_diabetes.csv y lo importe
+library(readr)
+s04_diabetes <- read_csv("C:/Users/ROSARIO/Desktop/Data/s04_diabetes.csv")
+View(s04_diabetes)
+```

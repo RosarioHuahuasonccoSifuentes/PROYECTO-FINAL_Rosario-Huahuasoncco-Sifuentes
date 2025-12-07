@@ -1,0 +1,38 @@
+---
+title: "SEMANA_6_ProyectoFinal"
+author: "Rosario_Huahuasoncco_Sifuentes"
+format: html
+editor: visual
+---
+
+**GRUPO 5**
+
+## PROYECTO FINAL
+
+**SEMANA 6: Como limpiar una data para utilizar una columna especifica**
+
+**PASO 1:** Nos dirigimos a “Import Dataset”\
+**PASO 2:** Nos aparecerá un pequeño cuadro, donde seleccionaremos “From Text (readr)”\
+**PASO 3:** Nos aparecerá una ventana, donde haremos click “Browse”\
+**PASO 4:** Seleccionamos la base de datos que es el archivo s04_diabetes.csv (previamente ya lo habíamos descargado) y después damos click en Open\
+**PASO 5:** Después se puede apreciar la vista previa de la base de datos\
+**PASO 6:** Antes de importar la data, seleccionamos y copiamos solamente el ejecutable que se encuentra en el cuadro Code Preview en este caso es\
+\<-read_csv("C:/Users/ROSARIO/Desktop/s04_diabetes.csv") y después ya podemos dar click en Import\
+**PASO 7:** Escribir un comentario y “data” junto a con\
+\<- read_csv("C:/Users/ROSARIO/Desktop/s04_diabetes.csv") para luego ejecutarla.
+
+```{r}
+#CARGANDO DATA A UTILIZAR
+data<- read_csv("C:/Users/ROSARIO/Desktop/Data/s04_diabetes.csv")
+```
+
+**PASO 8:** Una vez realizado, aparece la data del archivo s04_diabetes.csv titulada “data”\
+**PASO 9:** Si vemos en algunas casillas aparece NA, para ello se deben limpiar los datos. Por ejemplo, lo aplicaremos en la fila de insulina.\
+**PASO 10:** Escribir un comentario del proceso y después en otra casilla digitar el siguiente código: data_limpia\<-data\[!is.na(data\$insulina), \] y luego ejecutarla
+
+```{r}
+#LIMPIAR DATA DE UNA COLUMNA QUE CONTENGA FILAS NA "insulina"
+data_limpia<-data[!is.na(data$insulina), ]
+```
+
+**PASO 11:** Finalmente, aparece la "data_limpia"
